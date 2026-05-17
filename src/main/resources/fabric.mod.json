@@ -1,31 +1,26 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "lumos",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Lumos",
+	"description": "Dynamic lighting for Sodium. Held items and entities emit real light",
 	"authors": [
-		"Me!"
+		"HarryTheeWizard"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/HarryTheeWizard/Lumos"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"license": "MIT",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
 		"client": [
-			"com.example.client.ExampleModClient"
+          "com.harrytheewizard.lumos.client.LumosClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"lumos.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "lumos.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -33,6 +28,6 @@
 		"fabricloader": ">=0.19.2",
 		"minecraft": "~26.1.2",
 		"java": ">=25",
-		"fabric-api": "*"
+		"fabric-lifecycle-events-v1": "*"
 	}
 }
